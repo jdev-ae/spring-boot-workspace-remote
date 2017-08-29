@@ -1,0 +1,8 @@
+myApp:
+  message: "Hello from YAML"
+  data: "124578963"
+  number: 123
+
+appData:
+  ref1: "Hello Tester"
+  ref2: "${appData.ref1} is a test ref2"
