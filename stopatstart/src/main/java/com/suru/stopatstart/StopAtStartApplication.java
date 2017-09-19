@@ -9,6 +9,5 @@ public class StopAtStartApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(StopAtStartApplication.class, args);
-
     }
 }

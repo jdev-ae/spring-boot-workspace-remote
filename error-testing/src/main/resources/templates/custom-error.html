@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>custom error</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<h1>Error Page</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Key</th>
+        <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Time Stamp</td>
+        <!--/*@thymesVar id="timestamp" type="java.lang.String"*/-->
+        <td th:text="${timestamp}"></td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <!--/*@thymesVar id="status" type="java.lang.String"*/-->
+        <td th:text="${status}"></td>
+    </tr>
+    <tr>
+        <td>Error</td>
+        <!--/*@thymesVar id="error" type="java.lang.String"*/-->
+        <td th:text="${error}"></td>
+    </tr>
+    <tr>
+        <td>Message</td>
+        <!--/*@thymesVar id="message" type="java.lang.String"*/-->
+        <td th:text="${message}"></td>
+    </tr>
+    <tr>
+        <td>Path</td>
+        <!--/*@thymesVar id="path" type="java.lang.String"*/-->
+        <td th:text="${path}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
