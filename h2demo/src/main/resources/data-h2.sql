@@ -1,0 +1,13 @@
+-- INSERT INTO author (id, name, email) VALUES (1, 'SuRu', 'suru@gmail.com');
+-- INSERT INTO author (id, name, email) VALUES (2, 'Nani', 'nani@gmail.com');
+--
+-- INSERT INTO post (id, post, posted_on, author_id) VALUES (1, 'the pos 1', CURRENT_DATE(), 1);
+-- INSERT INTO post (id, post, posted_on, author_id) VALUES (2, 'the pos 2', CURRENT_DATE(), 1);
+-- INSERT INTO post (id, post, posted_on, author_id) VALUES (3, 'the pos 3', CURRENT_DATE(), 1);
+-- INSERT INTO post (id, post, posted_on, author_id) VALUES (4, 'the pos 4', CURRENT_DATE(), 1);
+-- INSERT INTO post (id, post, posted_on, author_id) VALUES (5, 'the pos 5', CURRENT_DATE(), 1);
+-- INSERT INTO post (id, post, posted_on, author_id) VALUES (6, 'the pos 6', CURRENT_DATE(), 2);
+-- INSERT INTO post (id, post, posted_on, author_id) VALUES (7, 'the pos 7', CURRENT_DATE(), 2);
+-- INSERT INTO post (id, post, posted_on, author_id) VALUES (8, 'the pos 8', CURRENT_DATE(), 2);
+-- INSERT INTO post (id, post, posted_on, author_id) VALUES (9, 'the pos 9', CURRENT_DATE(), 2);
+-- INSERT INTO post (id, post, posted_on, author_id) VALUES (10, 'the pos 10', CURRENT_DATE(), 2);
