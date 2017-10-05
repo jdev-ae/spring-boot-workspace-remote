@@ -7,9 +7,9 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Course {
@@ -19,8 +19,7 @@ public class Course {
 	private String code;
 	private String name;
 
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(joinColumns = { @JoinColumn(name = "student") }, inverseJoinColumns = { @JoinColumn(name = "course") })
+	@ManyToMany(mappedBy = "courses", cascade = CascadeType.ALL)
 	private Set<Student> students = new HashSet<>();
 
 	public Course() {
@@ -56,6 +55,7 @@ public class Course {
 		this.name = name;
 	}
 
+	@JsonIgnore
 	public Set<Student> getStudents() {
 		return students;
 	}

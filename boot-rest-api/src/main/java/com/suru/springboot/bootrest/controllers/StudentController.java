@@ -1,16 +1,23 @@
 package com.suru.springboot.bootrest.controllers;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.Set;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.suru.springboot.bootrest.model.Course;
 import com.suru.springboot.bootrest.model.Student;
 import com.suru.springboot.bootrest.services.StudentService;
 
@@ -32,6 +39,7 @@ public class StudentController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
+	@ResponseBody
 	public Student getStudentDetails(@PathVariable("id") Long id) {
 		return studentService.getStudentDetails(id);
 	}
@@ -42,4 +50,15 @@ public class StudentController {
 		return "ok";
 	}
 
+	@RequestMapping(method = RequestMethod.GET, path = "/{id}/courses")
+	@ResponseBody
+	public Set<Course> getCoursesForStudent(@PathVariable("id") Long id) {
+		return studentService.getCoursesForStudent(id);
+	}
+
+	@ExceptionHandler(Exception.class)
+	public void handleException(Exception ex, HttpServletResponse response) throws IOException {
+		response.sendError(HttpStatus.NOT_FOUND.value(), ex.getMessage());
+	}
+	
 }
