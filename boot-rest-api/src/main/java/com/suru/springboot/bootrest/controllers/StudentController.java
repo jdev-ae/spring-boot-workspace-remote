@@ -25,7 +25,7 @@ import com.suru.springboot.bootrest.services.StudentService;
 @RequestMapping("/student")
 public class StudentController {
 
-	private StudentService studentService;
+	private StudentService studentService;                                                                    
 
 	@Autowired
 	public StudentController(StudentService studentService) {
