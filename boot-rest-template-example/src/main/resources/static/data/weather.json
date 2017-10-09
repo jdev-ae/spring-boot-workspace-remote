@@ -1,0 +1,10 @@
+{
+	"temprature": "60F",
+	"description": "Cloudy and 50% Rain",
+	"location": {
+		"city": "Schaumburg",
+		"state": "IL",
+		"zip": "60173",
+		"country": "USA"
+	}
+}
