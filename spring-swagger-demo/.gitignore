@@ -1,0 +1,9 @@
+/.idea/
+/.mvn/
+/target/
+/spring-swagger-demo.iml
+/mvnw.cmd
+/mvnw
+/.project
+/.settings/
+/src/test
